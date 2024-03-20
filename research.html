@@ -46,23 +46,40 @@
         background-color: #f0f0f0;
         color: #007bff;
     }
+    .blinking {
+        animation: blinker 1s linear infinite;
+    }
+    @keyframes blinker {
+        50% {
+            opacity: 0;
+        }
+    }
 </style>
 </head>
 <body>
 
 <h2>Stock Research Analysis PDFs</h2>
 <ul>
-    <li>
+    <li id="PVR">
         <a href="PVR Research.pdf" target="_blank">PVR - 21/03/2024</a>
     </li>
-    <li>
+    <li id="BharatElectronics">
         <a href="Research Publish On Bharat Electronics.pdf" target="_blank">Bharat Electronics -  21/03/2024</a>
     </li>
-    <li>
+    <li id="HDFCBANK">
         <a href="HDFCBANK Research.pdf" target="_blank">HDFC BANK - 21/03/2024</a>
     </li>
     <!-- Add more stock analysis PDF files as needed -->
 </ul>
+
+<script>
+    // Simulate adding a new PDF after 7 seconds
+    setTimeout(function() {
+        var newPDFRow = document.createElement("li");
+        newPDFRow.innerHTML = '<a href="NewPDF.pdf" target="_blank" class="blinking">New PDF - ' + new Date().toLocaleDateString() + '</a>';
+        document.querySelector("ul").insertBefore(newPDFRow, document.querySelector("ul").firstChild);
+    }, 7000); // Adjust the delay as needed
+</script>
 
 </body>
 </html>
