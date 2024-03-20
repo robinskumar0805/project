@@ -28,7 +28,6 @@
         overflow: hidden;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
-        position: relative; /* Position relative for absolute positioning of light */
     }
     li:hover {
         transform: translateY(-5px);
@@ -47,25 +46,6 @@
         background-color: #f0f0f0;
         color: #007bff;
     }
-    .blink {
-        position: absolute;
-        right: -20px; /* Adjust position of the light */
-        top: 50%; /* Center vertically */
-        transform: translateY(-50%);
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: red;
-        animation: blink-animation 1s infinite alternate; /* Blink animation */
-    }
-    @keyframes blink-animation {
-        0% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-        }
-    }
 </style>
 </head>
 <body>
@@ -75,24 +55,14 @@
     <li>
         <a href="PVR Research.pdf" target="_blank">PVR - 21/03/2024</a>
     </li>
-    <li class="new-pdf"> <!-- Add the new-pdf class to indicate a new PDF -->
+    <li>
         <a href="Research Publish On Bharat Electronics.pdf" target="_blank">Bharat Electronics -  21/03/2024</a>
-        <div class="blink"></div> <!-- Blinking red light -->
     </li>
     <li>
         <a href="HDFCBANK Research.pdf" target="_blank">HDFC BANK - 21/03/2024</a>
     </li>
     <!-- Add more stock analysis PDF files as needed -->
 </ul>
-
-<script>
-    // Add a class to the new PDF for 7 days
-    document.querySelectorAll('.new-pdf').forEach(function(item) {
-        setTimeout(function() {
-            item.classList.remove('new-pdf');
-        }, 7 * 24 * 60 * 60 * 1000); // 7 days in milliseconds
-    });
-</script>
 
 </body>
 </html>
