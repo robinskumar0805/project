@@ -46,13 +46,8 @@
         background-color: #f0f0f0;
         color: #007bff;
     }
-    .blink {
-        animation: blinker 1s linear infinite;
-    }
-    @keyframes blinker {
-        50% {
-            opacity: 0;
-        }
+    .new-pdf {
+        background-color: #ffffcc; /* Yellow background to indicate new PDF */
     }
 </style>
 </head>
@@ -60,47 +55,25 @@
 
 <h2>Stock Research Analysis PDFs</h2>
 <ul>
-    <li id="pvr">
+    <li>
         <a href="PVR Research.pdf" target="_blank">PVR - 21/03/2024</a>
     </li>
-    <li id="bharatElectronics">
+    <li class="new-pdf"> <!-- Add the new-pdf class to indicate a new PDF -->
         <a href="Research Publish On Bharat Electronics.pdf" target="_blank">Bharat Electronics -  21/03/2024</a>
     </li>
-    <li id="hdfcBank">
+    <li>
         <a href="HDFCBANK Research.pdf" target="_blank">HDFC BANK - 21/03/2024</a>
     </li>
     <!-- Add more stock analysis PDF files as needed -->
 </ul>
 
 <script>
-    // Function to add blinking effect to new PDFs
-    function addBlinkEffect(id) {
-        var element = document.getElementById(id);
-        element.classList.add("blink");
-    }
-
-    // Check if a PDF is new (less than 7 days old)
-    function isNewPDF(dateString) {
-        var currentDate = new Date();
-        var pdfDate = new Date(dateString);
-        var timeDiff = Math.abs(currentDate.getTime() - pdfDate.getTime());
-        var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
-        return diffDays <= 7;
-    }
-
-    // Add blinking effect to new PDFs
-    var pvrDate = "2024-03-21";
-    var bharatElectronicsDate = "2024-03-21";
-    var hdfcBankDate = "2024-03-21"; // Update with actual dates
-    if (isNewPDF(pvrDate)) {
-        addBlinkEffect("pvr");
-    }
-    if (isNewPDF(bharatElectronicsDate)) {
-        addBlinkEffect("bharatElectronics");
-    }
-    if (isNewPDF(hdfcBankDate)) {
-        addBlinkEffect("hdfcBank");
-    }
+    // Add a class to the new PDF for 7 days
+    document.querySelectorAll('.new-pdf').forEach(function(item) {
+        setTimeout(function() {
+            item.classList.remove('new-pdf');
+        }, 7 * 24 * 60 * 60 * 1000); // 7 days in milliseconds
+    });
 </script>
 
 </body>
