@@ -3,8 +3,26 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f9fa; /* Light gray background */
+
+    
 }
 
+/* CSS for the hover effect */
+.feature:hover h3,
+.feature:hover .expert-advice-button {
+    color: #4CAF50; /* Change color to green on hover */
+}
+
+/* CSS for the button */
+.expert-advice-button {
+    background-color: transparent;
+    color: #333; /* Initial color of the text */
+    border: none;
+    padding: 0;
+    font-size: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+}
 
 header {
     background-color: #343a40; /* Dark gray */
