@@ -7,9 +7,21 @@ body {
     
 }
 
+/*this is for mobile view*/
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
 
+    nav ul li {
+        display: block; /* Change to block to stack items vertically */
+        margin: 10px 0; /* Adjust margin for spacing */
+    }
+}
 
-/* CSS for the sections */
+/* CSS for the sections  for investment section*/
 body {
     font-family: Arial, sans-serif;
     margin: 0;
