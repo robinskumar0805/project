@@ -7,6 +7,62 @@ body {
     
 }
 
+
+
+        /* CSS for the sections */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+
+        .investment-section {
+            background-color: #fff;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .investment-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .investment-section h2 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .investment-section p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+    
+
 /* CSS for the hover effect */
 .feature:hover h3,
 .feature:hover .expert-advice-button {
@@ -53,7 +109,13 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #ffc107; /* Yellow on hover */
+    
 }
+
+
+
+
+
 
 main {
     padding: 20px;
@@ -143,3 +205,66 @@ main {
 .investment-photo img:hover {
     transform: translateY(-5px); /* Move up on hover */
 }
+/*this is for SNIBOR TEXT */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    margin-left: 10px; /* Adjust margin as needed */
+}
+
+/*this is for socail icon */
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    margin: 0 5px;
+    font-size: 24px;
+    color: #333; /* Adjust color as needed */
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+.social-icons .social-icon:nth-child(1) i {
+    color: #25D366; /* WhatsApp color */
+}
+
+.social-icons .social-icon:nth-child(2) i {
+    color: #D44638; /* Email color */
+}
+
+.social-icons .social-icon:nth-child(3) i {
+    color: #1DA1F2; /* Twitter color */
+}
+
+.social-icons .social-icon:nth-child(4) i {
+    color: #C13584; /* Instagram color */
+}
+
+.social-icons .social-icon:nth-child(5) i {
+    color: #FF0000; /* YouTube color */
+}
+
+.social-icons .social-icon:nth-child(6) i {
+    color: #1877F2; /* Facebook color */
+}
+
+
